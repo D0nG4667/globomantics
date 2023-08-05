@@ -1,6 +1,9 @@
+import { useEffect, useMemo, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './main-page.css';
 import Header from './header';
-import { useEffect, useMemo, useState } from 'react';
+import FeaturedHouse from './featured-house';
 
 function App() {
   const [allHouses, setAllHouses] = useState([]);
@@ -24,9 +27,14 @@ function App() {
 
 
   return (
-    <div className="container">
-      <Header subtitle="Providing houses all over the world"/>
-    </div>
+    <Router>
+      <div className="container">
+        <Header subtitle="Providing houses all over the world"/>
+        <Routes>
+          <Route path="/" element={<FeaturedHouse house={featuredHouse} />} />
+        </Routes>
+      </div>      
+    </Router>
   );
 }
 
