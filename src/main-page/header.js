@@ -3,7 +3,7 @@ import logo from "./GloboLogo.png";
 const Header = ({ subtitle }) => (
     <header className="row">
         <div className="col-md-5">
-            <img src={logo} alt="logo" logo className="logo" />
+            <img src={logo} alt="logo" className="logo" />
         </div>
         <div className="col-md-7 mt-5 subtitle">
             {subtitle}
