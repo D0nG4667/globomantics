@@ -11,16 +11,16 @@ const House = ({ house }) => {
         setInquiryShown(!inquiryShown);
     };
     return ( 
-        <div>
+        <div className="container clearfix">
             <div className="row mt-2">
-                <h5 className="col-md 12">{house.country}</h5>
+                <h5 className="col-md-12">{house.country}</h5>
             </div>
             <div className="row">
                 <h3 className="col-md-12">{house.address}</h3>
             </div>
             <div className="row">
                 <div className="col-md-7">
-                    <img src={`/images/${house.photo}.jpeg`} alt={`The house located at ${house.address}`} />
+                    <img className="img-fluid rounded-start" src={`/images/${house.photo}.jpeg`} alt={`The house located at ${house.address}`} />
                 </div>
                 <div className="col-md-5">
                     <p className="price">${house.price}</p>
