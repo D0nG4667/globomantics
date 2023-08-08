@@ -5,7 +5,7 @@ const HouseFromQuery = ({ allHouses }) => {
     const { id } = useParams();
     const house = allHouses.find((h) => h.id === parseInt(id));
 
-    if (!house) return <div>House not found.</div>;
+    if (!house) return console.log("House not found. Checking...");
     return <House house={house}></House>    
 }
  
